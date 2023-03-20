@@ -1,0 +1,61 @@
+version: '3.5'
+
+services:
+  s3:
+    image: minio/minio:RELEASE.2023-02-27T18-10-45Z
+    volumes:
+      - minio_vol:/data
+    ports:
+      - 8000:8000
+    environment:
+      - MINIO_ROOT_USER=adminuser
+      - MINIO_ROOT_PASSWORD=adminuser
+    command: server --console-address ":8000" /data/test_bucket
+    restart: on-failure
+
+  createbuckets:
+    image: minio/mc
+    depends_on:
+      - s3
+    entrypoint: >
+      /bin/sh -c "
+      /usr/bin/mc alias set myminio http://minio:9000 adminuser adminuser;
+      /usr/bin/mc mb myminio/test_bucket;
+      /usr/bin/mc policy set public myminio/test_bucket;
+      exit 0;
+      "
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mlflow
+      MYSQL_DATABASE: mlflow
+      MYSQL_USER: mlflow
+      MYSQL_PASSWORD: mlflow
+
+  mlflow:
+    restart: always
+    build: ./mlflow
+    image: mlflow_server
+    container_name: mlflow_server
+    expose:
+        - "5000"
+    # networks:
+    #     - frontend
+    #     - backend
+    environment:
+        - AWS_ACCESS_KEY_ID=adminuser
+        - AWS_SECRET_ACCESS_KEY=adminuser
+        # - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION}
+    command: mlflow server --backend-store-uri mysql+pymysql://mlflow:mlflow@db:3306/mlflow --default-artifact-root s3://test_bucket --host 0.0.0.0
+    ports:
+      - "5000:5000"
+
+  
+volumes:
+  minio_vol:
+
+
+  
