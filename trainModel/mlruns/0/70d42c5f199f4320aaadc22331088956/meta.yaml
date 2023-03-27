@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alhudam/Desktop/projects/mlflow-test/trainModel/mlruns/0/70d42c5f199f4320aaadc22331088956/artifacts
+end_time: 1679930952332
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 70d42c5f199f4320aaadc22331088956
+run_name: orderly-moose-125
+run_uuid: 70d42c5f199f4320aaadc22331088956
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1679930946035
+status: 3
+tags: []
+user_id: alhudam
