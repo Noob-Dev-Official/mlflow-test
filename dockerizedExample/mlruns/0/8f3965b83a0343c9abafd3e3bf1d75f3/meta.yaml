@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alhudam/Desktop/projects/mlflow-test/dockerizedExample/mlruns/0/8f3965b83a0343c9abafd3e3bf1d75f3/artifacts
+end_time: 1680016313841
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8f3965b83a0343c9abafd3e3bf1d75f3
+run_name: selective-mare-570
+run_uuid: 8f3965b83a0343c9abafd3e3bf1d75f3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680016309826
+status: 4
+tags: []
+user_id: alhudam
