@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/0/8dc683d5e4f14b34ac0b5f3c06dd987c/artifacts
+end_time: 1680005819859
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 8dc683d5e4f14b34ac0b5f3c06dd987c
+run_name: stately-loon-519
+run_uuid: 8dc683d5e4f14b34ac0b5f3c06dd987c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680005813911
+status: 4
+tags: []
+user_id: alhudam
