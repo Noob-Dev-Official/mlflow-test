@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alhudam/Desktop/projects/mlflow-test/train/mlruns/0/f41b147bc8264a038f9c18764749286d/artifacts
+end_time: 1680617976792
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f41b147bc8264a038f9c18764749286d
+run_name: unruly-shrimp-603
+run_uuid: f41b147bc8264a038f9c18764749286d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680617972227
+status: 3
+tags: []
+user_id: alhudam
