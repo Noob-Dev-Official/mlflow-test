@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alhudam/Desktop/projects/mlflow-test/custom_train/mlruns/0/de9220e5d1b8435f8a214f60d4dd0d97/artifacts
+end_time: 1680623011513
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: de9220e5d1b8435f8a214f60d4dd0d97
+run_name: bustling-turtle-456
+run_uuid: de9220e5d1b8435f8a214f60d4dd0d97
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680623006353
+status: 3
+tags: []
+user_id: alhudam
