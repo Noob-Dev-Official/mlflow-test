@@ -1,0 +1,19 @@
+artifact_path: iris-classifier
+flavors:
+  python_function:
+    data: model.xgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.9.6
+  xgboost:
+    code: null
+    data: model.xgb
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: xgb
+    xgb_version: 1.7.5
+mlflow_version: 2.2.2
+model_uuid: 4b4639e2f54c47cf95780974a5f9ba4e
+run_id: f0eab9069afa4781bd4b9d6e9366e125
+utc_time_created: '2023-04-05 10:06:00.792496'

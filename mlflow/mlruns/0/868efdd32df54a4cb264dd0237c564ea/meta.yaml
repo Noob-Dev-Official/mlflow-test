@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alhudam/Desktop/projects/mlflow-test/mlflow/mlruns/0/868efdd32df54a4cb264dd0237c564ea/artifacts
+end_time: 1680689076405
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 868efdd32df54a4cb264dd0237c564ea
+run_name: brawny-sheep-488
+run_uuid: 868efdd32df54a4cb264dd0237c564ea
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680689071875
+status: 3
+tags: []
+user_id: alhudam

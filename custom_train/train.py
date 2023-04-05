@@ -23,7 +23,13 @@ with mlflow.start_run():
     xgb_classifier.fit(X_train, Y_train)
     clf_params = xgb_classifier.get_xgb_params()
     mlflow.log_params(clf_params)
-    model_info = mlflow.xgboost.log_model(xgb_classifier, "iris-classifier")
+    # model_info = mlflow.xgboost.log_model(xgb_classifier, "iris-classifier")
+    model_info = mlflow.xgboost.log_model(
+        xgb_model=xgb_classifier,
+        artifact_path="iris-classifier",
+        registered_model_name="testing"
+    )
+
 
 # Load saved model and make predictions
 xgb_classifier_saved = mlflow.pyfunc.load_model(model_info.model_uri)

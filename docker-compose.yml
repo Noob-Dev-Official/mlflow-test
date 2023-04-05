@@ -45,6 +45,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - mlflow_vol:/app
+      - ./mlflow:/app
     environment:
       - TEST=test
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}

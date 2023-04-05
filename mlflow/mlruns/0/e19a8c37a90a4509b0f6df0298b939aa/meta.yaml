@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alhudam/Desktop/projects/mlflow-test/mlflow/mlruns/0/e19a8c37a90a4509b0f6df0298b939aa/artifacts
+end_time: 1680689347071
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e19a8c37a90a4509b0f6df0298b939aa
+run_name: youthful-cod-594
+run_uuid: e19a8c37a90a4509b0f6df0298b939aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680689343029
+status: 3
+tags: []
+user_id: alhudam
