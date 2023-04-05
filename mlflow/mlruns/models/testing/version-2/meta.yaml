@@ -1,11 +1,11 @@
-creation_timestamp: 1680689076391
+creation_timestamp: 1680694604254
 current_stage: None
 description: null
-last_updated_timestamp: 1680689076391
+last_updated_timestamp: 1680694604254
 name: testing
-run_id: 868efdd32df54a4cb264dd0237c564ea
+run_id: 6316d38b8b3f46d396f8082876bfdfe7
 run_link: null
-source: file:///Users/alhudam/Desktop/projects/mlflow-test/mlflow/mlruns/0/868efdd32df54a4cb264dd0237c564ea/artifacts/iris-classifier
+source: file:///Users/alhudam/Desktop/projects/mlflow-test/mlflow/mlruns/0/6316d38b8b3f46d396f8082876bfdfe7/artifacts/model
 status: READY
 status_message: null
 user_id: null

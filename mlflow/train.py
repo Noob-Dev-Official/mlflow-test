@@ -23,10 +23,20 @@ xgb_classifier = XGBClassifier(
 )
 
 # set MLFlow tracking URI - to log RUNS remotely
-mlflow.set_tracking_uri(f"{config.MLFLOW_URL}:{config.MLFLOW_PORT}")
+# mlflow.set_tracking_uri(f"{config.MLFLOW_URL}:{config.MLFLOW_PORT}")
+
+# set MLFlow tracking URI - to log RUNS remotely
+mlflow.set_tracking_uri(
+    "mysql+pymysql://mlflow_user:mlflow_password@127.0.0.1:3306/mlflow")
+
+s3_bucket = "s3://bucket"  # replace this value
+mlflow.create_experiment('hello', s3_bucket)
+mlflow.set_experiment('hello')
+
 
 # log fitted model and XGBClassifier parameters
 with mlflow.start_run():
+    print(mlflow.get_artifact_uri())  # should print out an s3 bucket path
     xgb_classifier.fit(X_train, Y_train)
     clf_params = xgb_classifier.get_xgb_params()
     mlflow.log_params(clf_params)
@@ -44,5 +54,5 @@ with mlflow.start_run():
 
 
 # Load saved model and make predictions
-xgb_classifier_saved = mlflow.pyfunc.load_model(model_info.model_uri)
-y_pred = xgb_classifier_saved.predict(X_test)
+# xgb_classifier_saved = mlflow.pyfunc.load_model(model_info.model_uri)
+# y_pred = xgb_classifier_saved.predict(X_test)

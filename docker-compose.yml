@@ -6,6 +6,7 @@ services:
     volumes:
       - minio_vol:/data
     ports:
+      - 9000:9000
       - 8000:8000
     environment:
       - MINIO_ROOT_USER=${AWS_ACCESS_KEY_ID}
@@ -30,6 +31,8 @@ services:
     restart: unless-stopped
     expose:
       - "3306"
+    ports:
+      - 3306:3306
     environment:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
@@ -45,7 +48,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - mlflow_vol:/app
-      - ./mlflow:/app
+      # - ./mlflow:/app
     environment:
       - TEST=test
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
@@ -56,7 +59,7 @@ services:
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
       - MLFLOW_S3_ENDPOINT_URL=http://s3:9000
     ports:
-      - 9000:5000
+      - 3000:5000
   
 volumes:
   minio_vol:
