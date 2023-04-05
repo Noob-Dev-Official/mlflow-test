@@ -22,7 +22,7 @@ xgb_classifier = XGBClassifier(
     random_state=123,
 )
 
-# set MLFlow tracking URI
+# set MLFlow tracking URI - to log RUNS remotely
 mlflow.set_tracking_uri(f"{config.MLFLOW_URL}:{config.MLFLOW_PORT}")
 
 # log fitted model and XGBClassifier parameters
@@ -38,8 +38,8 @@ with mlflow.start_run():
     # model_info = mlflow.xgboost.log_model(xgb_classifier, "iris-classifier")
     model_info = mlflow.xgboost.log_model(
         xgb_model=xgb_classifier,
-        artifact_path="iris-classifier",
-        registered_model_name="bucket/testing"
+        artifact_path="model",
+        registered_model_name="testing"
     )
 
 
