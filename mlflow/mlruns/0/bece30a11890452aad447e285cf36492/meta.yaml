@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alhudam/Desktop/projects/mlflow-test/mlflow/mlruns/0/bece30a11890452aad447e285cf36492/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bece30a11890452aad447e285cf36492
+run_name: amusing-slug-374
+run_uuid: bece30a11890452aad447e285cf36492
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680794956881
+status: 1
+tags: []
+user_id: alhudam

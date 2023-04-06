@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alhudam/Desktop/projects/mlflow-test/mlflow/mlruns/0/911c78ecc3f9454bbc11d9257bdef922/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 911c78ecc3f9454bbc11d9257bdef922
+run_name: bright-cub-70
+run_uuid: 911c78ecc3f9454bbc11d9257bdef922
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1680794904961
+status: 1
+tags: []
+user_id: alhudam
