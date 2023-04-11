@@ -6,7 +6,10 @@ from mlflow import log_metric, log_param, log_artifacts
 
 mlflow.set_tracking_uri('http://localhost:3000')
 
+print(mlflow.get_artifact_uri())
+
 if __name__ == "__main__":
+   mlflow.end_run()
    with mlflow.start_run() as run:
       print("Running mlflow_tracking.py")
 

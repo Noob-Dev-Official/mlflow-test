@@ -8,11 +8,9 @@ import mlflow
 
 import config
 
-# os.environ['MLFLOW_TRACKING_USERNAME'] = 'name'
-# os.environ['MLFLOW_TRACKING_PASSWORD'] = 'pass'
 
 # set MLFlow tracking URI - to connect to tracking server
-mlflow.set_tracking_uri(f"{config.MLFLOW_URL}:{config.MLFLOW_PORT}")
+mlflow.set_tracking_uri(config.MLFLOW_TRACKING_URI)
 # mlflow.set_tracking_uri("mysql+pymysql://mlflow_user:mlflow_password@127.0.0.1:3306/mlflow")
 
 
@@ -30,12 +28,10 @@ xgb_classifier = XGBClassifier(
     random_state=123,
 )
 
-
 # s3_bucket = "s3://bucket"  # replace this value
 # mlflow.create_experiment('hello', s3_bucket)
 
-
-mlflow.set_experiment('hello')
+# mlflow.set_experiment('hello')
 
 # log fitted model and XGBClassifier parameters
 with mlflow.start_run():
@@ -48,8 +44,6 @@ with mlflow.start_run():
     mlflow.log_params(clf_params)
 
     tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
-    print(tracking_url_type_store)
-    print(mlflow.get_tracking_uri())
 
     # model_info = mlflow.xgboost.log_model(xgb_classifier, "iris-classifier")
     model_info = mlflow.xgboost.log_model(
