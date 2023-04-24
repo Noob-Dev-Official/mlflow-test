@@ -29,11 +29,11 @@ xgb_classifier = XGBClassifier(
     random_state=123,
 )
 
-s3_bucket = "s3://bucket"
-experiment_name = f'hello{random.randint(0, 40)}'
-mlflow.create_experiment(experiment_name, s3_bucket)
+# s3_bucket = "s3://bucket"
+# experiment_name = f'hello{random.randint(0, 40)}'
+# mlflow.create_experiment(experiment_name, s3_bucket)
 
-mlflow.set_experiment(experiment_name)
+# mlflow.set_experiment(experiment_name)
 
 # log fitted model and XGBClassifier parameters
 with mlflow.start_run():
@@ -50,7 +50,7 @@ with mlflow.start_run():
     # model_info = mlflow.xgboost.log_model(xgb_classifier, "iris-classifier")
     model_info = mlflow.xgboost.log_model(
         xgb_model=xgb_classifier,
-        artifact_path="test",
+        artifact_path="teszt",
         registered_model_name="testing"
     )
 
